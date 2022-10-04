@@ -99,7 +99,7 @@
           </thead>
           <tbody>
             {% for item in data %}
-              {% if item['Column'] != 3 or item['Column'] != 5 or item['Column'] != 15%}
+              {% if item['Column'] == 0%}
               <tr>
                 {% if 'Camera_Id' in item  %}<td> {{item['Camera_Id']}}</td>{%endif%}
                 {% if 'Camera' in item  %}<td> {{item['Camera']}}</td>{%endif%}
