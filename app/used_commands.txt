@@ -1,0 +1,20 @@
+> mkdir everybody-codes
+> cd everybody-codes
+> py -3 -m venv venv
+> venv\Scripts\activate
+
+python -m pip install --upgrade pip
+python -m pip install flask
+
+
+<table>
+{%- for row in items|batch(3, '&nbsp;') %}
+  <tr>
+  {%- for column in row %}
+    <td>{{ column }}</td>
+  {%- endfor %}
+  </tr>
+{%- endfor %}
+</table>
+
+{% block table %}{% endblock %}

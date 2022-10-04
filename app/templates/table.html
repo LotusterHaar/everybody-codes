@@ -1,0 +1,118 @@
+{% extends "index.html" %}
+{% block body %}
+<main>
+  <table id="cameraTableContainer">
+    <tbody>
+      <tr>
+        <td>
+          <table id="column3">
+            <thead>
+              <tr>
+                <th colspan="4">Cameras 3</th>
+              </tr>
+              <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in data %}
+                {% if item['Column'] == 3 %}
+                <tr>
+                  {% if 'Camera_Id' in item  %}<td> {{item['Camera_Id']}}</td>{%endif%}
+                  {% if 'Camera' in item  %}<td> {{item['Camera']}}</td>{%endif%}
+                  {% if 'Latitude' in item  %}<td> {{item['Latitude']}}</td>{%endif%}
+                  {% if 'Longitude' in item  %}<td> {{item['Longitude']}}</td>{%endif%}
+                </tr>
+                {% endif %} 
+              {% endfor %}
+            </tbody>
+          </table>
+        </td>
+        <td>
+          <table id="column5">
+            <thead>
+              <tr>
+                <th colspan="4">Cameras 5</th>
+              </tr>
+              <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in data %}
+                {% if item['Column'] == 5 %}
+                <tr>
+                  {% if 'Camera_Id' in item  %}<td> {{item['Camera_Id']}}</td>{%endif%}
+                  {% if 'Camera' in item  %}<td> {{item['Camera']}}</td>{%endif%}
+                  {% if 'Latitude' in item  %}<td> {{item['Latitude']}}</td>{%endif%}
+                  {% if 'Longitude' in item  %}<td> {{item['Longitude']}}</td>{%endif%}
+                </tr>
+                {% endif %} 
+              {% endfor %}
+            </tbody>
+          </table>
+        </td>
+        <td>
+          <table id="column15">
+            <thead>
+              <tr>
+                <th colspan="4">Cameras 15</th>
+              </tr>
+              <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in data %}
+                {% if item['Column'] == 15 %}
+                <tr>
+                  {% if 'Camera_Id' in item  %}<td> {{item['Camera_Id']}}</td>{%endif%}
+                  {% if 'Camera' in item  %}<td> {{item['Camera']}}</td>{%endif%}
+                  {% if 'Latitude' in item  %}<td> {{item['Latitude']}}</td>{%endif%}
+                  {% if 'Longitude' in item  %}<td> {{item['Longitude']}}</td>{%endif%}
+                </tr>
+                {% endif %} 
+              {% endfor %}
+            </tbody>
+          </table>
+        </td>
+        <table id="columnOther">
+          <thead>
+            <tr>
+              <th colspan="4">Cameras Overig</th>
+            </tr>
+            <tr>
+              <th>Number</th>
+              <th>Name</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in data %}
+              {% if item['Column'] != 3 or item['Column'] != 5 or item['Column'] != 15%}
+              <tr>
+                {% if 'Camera_Id' in item  %}<td> {{item['Camera_Id']}}</td>{%endif%}
+                {% if 'Camera' in item  %}<td> {{item['Camera']}}</td>{%endif%}
+                {% if 'Latitude' in item  %}<td> {{item['Latitude']}}</td>{%endif%}
+                {% if 'Longitude' in item  %}<td> {{item['Longitude']}}</td>{%endif%}
+              </tr>
+              {% endif %} 
+            {% endfor %}
+          </tbody>
+        </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>
+{% endblock %}
