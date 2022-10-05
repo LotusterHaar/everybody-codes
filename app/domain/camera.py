@@ -4,7 +4,7 @@ from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     # This is necessary to prevent circular imports
-    from domain.vote_repository import VoteRepository
+    from domain.camera_repository import CameraRepository
     
 @dataclass
 class Camera:
